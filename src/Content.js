@@ -1,45 +1,38 @@
 import { useState,useEffect } from "react";
 import boba from './boba.jpeg'
-import axios from "axios";
+import {getImg} from "./apiCall.js";
 
 const Content = () => {
   const [imageData ,setimageData]=useState(null);
   const [loading, setLoading] = useState(false);
   const [searchTerm,setSerchTerm]=useState('');
-  const[iconClick,seticonClick]=useState('');
+  const [iconClick,seticonClick]=useState(-1);
   const [isActive,setActive]=useState(false);
+
   const viewClick=()=>{
     setActive(!isActive)
-}
-const eyeClick=(itemName)=>{
-  seticonClick(itemName);
-  imageData.splice(itemName,1);
-}
-  
-  const apiUrl='https://randomuser.me/api?results=15'
-
-  const getImg=async()=>{
-    try {
-      const data =await axios.get(`${apiUrl}`)
-      return data
-    } catch (error) {
-        throw error
-    }
   }
+
+  let eyeClick=(itemName)=>{
+    seticonClick(itemName);
+    imageData.splice(itemName,1);
+  }
+
   const getData=async()=>{
     try {
       setLoading(true);
-      const imgdata= await getImg();
-      setimageData(imgdata.data.results);
+      const imgData= await getImg();
+      setimageData(imgData.data.results);
       setLoading(false);
     } catch (error) {
     console.log(error.message);
     setLoading(false);
     }
   }
+
   useEffect(()=>{
      getData()
-},[]);
+  },[]);
     return (
       <section class="library">
         <div className="filter">
@@ -85,7 +78,7 @@ const eyeClick=(itemName)=>{
                 </div>
             </div>
           ))}
-        </div>                   ) : null}
+        </div>  ) : null}
                    </>
                  ) }  
         </section>

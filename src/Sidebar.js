@@ -12,7 +12,6 @@ const Sidebara = () => {
             </div>
            <div className={isActive?'hide-sidebar':'sidebar-items'} >
                <div>
-                    
                     <ion-icon name="home-outline"></ion-icon>   
                     <p>Home </p>
                </div>
