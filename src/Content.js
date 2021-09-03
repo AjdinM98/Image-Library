@@ -69,8 +69,9 @@ const eyeClick=(itemName)=>{
             <div className={isActive ? 'library-item-list-view': 'library-item grid-view'}>
               {console.log()}
               <img src={boba} alt=""/>
+              <div className="justify-center">
               <p className="library-item-title">{image.name.first}</p>
-              
+              </div>
                 <div className="item-details">
                   <div>
                   <ion-icon name="image-outline"></ion-icon>

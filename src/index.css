@@ -37,6 +37,10 @@ a
   {
     margin-inline: 0 !important;
   }
+  .library-item-title
+  {
+    text-align: center;
+  }
 
   /*================================UTILITY==========================================*/
   .eye-icon
@@ -75,6 +79,10 @@ a
     margin:.5rem;
     max-width: 100% !important;
     flex: 0 0 100% !important;
+  }
+  .library-item-title
+  {
+    text-align: center;
   }
   .item-details
 {
