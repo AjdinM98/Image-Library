@@ -51,7 +51,7 @@ const Content = () => {
           <>
             {imageData!==null? (
                         
-        <div className={isActive ? 'library-container justify-center': 'library-container'}>
+        <div className={isActive ? 'library-container-list-view': 'library-container'}>
           
           {imageData.filter(val=>{
             if(searchTerm==='')
@@ -62,9 +62,7 @@ const Content = () => {
             <div className={isActive ? 'library-item-list-view': 'library-item grid-view'}>
               {console.log()}
               <img src={boba} alt=""/>
-              <div className="justify-center">
               <p className="library-item-title">{image.name.first}</p>
-              </div>
                 <div className="item-details">
                   <div>
                   <ion-icon name="image-outline"></ion-icon>

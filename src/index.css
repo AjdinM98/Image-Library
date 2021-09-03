@@ -23,6 +23,11 @@ a
 @media(max-width:1100px)
 {
   /*================================IMAGE LIBRARY==========================================*/
+  .library-item-list-view
+  {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
   .item-details
   {
     justify-content: center !important;
@@ -40,6 +45,11 @@ a
   .library-item-title
   {
     text-align: center;
+  }
+  .library-item
+  {
+    max-width: 22.5% !important;
+    flex: 0 0 22.5% !important;
   }
 
   /*================================UTILITY==========================================*/
@@ -73,12 +83,13 @@ a
   /*================================IMAGE LIBRARY==========================================*/
   .library-item-list-view
   {
-    box-shadow: 0px 5px 3px -2px rgba(194,194,194,1);
-    -webkit-box-shadow: 0px 5px 3px -2px rgba(194,194,194,1);
-    -moz-box-shadow: 0x 5px 3px -2px rgba(194,194,194,1);
-    margin:.5rem;
     max-width: 100% !important;
     flex: 0 0 100% !important;
+  }
+  .library-item
+  {
+    max-width: 14% !important;
+    flex: 0 0 14% !important;
   }
   .library-item-title
   {
@@ -392,14 +403,22 @@ a
       -webkit-box-shadow: 0px 5px 3px -2px rgba(194,194,194,1);
       -moz-box-shadow: 0x 5px 3px -2px rgba(194,194,194,1);
       margin:.5rem;
-      max-width: 50%;
-      flex: 0 0 50%;
+      max-width: 30%;
+      flex-basis: 30%;
     }
     .library-container
     {
       padding-top: 1rem;
       display: flex;
       flex-wrap: wrap;
+    }
+    .library-container-list-view
+    {
+      padding-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
     }
     .library-item
     {
