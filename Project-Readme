@@ -1,0 +1,15 @@
+Hello,
+
+First of all, sorry for being late with the repository as I already mentioned in the e-mail I had personal matters to attend to which delayed my work as far as wednesday.
+This section is comment on my code:
+Improvements could be made in the css file, additional refactoring/cleaning up can be done. Through work/change I think some lines are being unused,
+but since I think I'm already late I decided not to do that at this moment.
+Navigation searchbar doesn't do any searching(I kept it for the UI), but the Image-Library section filter does as I think in mobile view its a much better option for filtering images.
+You can test the sidebar button, sidebar link hovers, grid/list view buttons aswell as the eye icon on each image.
+I used the random-user api but I stuck with only the names from it and hardcoded the image for the looks. The api calls are made with axios.
+Also, the api call could be an independent function that can be called elsewhere to make it more reusable.
+
+I'm looking forward to explaining my code deeper(mistakes aswell) and to get your thoughts on it.
+
+Best regards,
+Ajdin
