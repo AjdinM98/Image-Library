@@ -23,7 +23,7 @@ const Navbar = () => {
                             <a href="#" className="nav-icon"><ion-icon name="settings-outline"></ion-icon></a>
                             <a href="#" className="nav-user-icon"><ion-icon name="person-circle-outline"></ion-icon></a>
                         </div>
-                        <div class="user-text">
+                        <div className="user-text">
                             <a href="#" className="nav-user-icon-mobile"><ion-icon name="person-circle-outline"></ion-icon></a>
                             <p>John Doe</p>
                             <p>Administrator</p>

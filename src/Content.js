@@ -34,9 +34,9 @@ const Content = () => {
      getData()
   },[]);
     return (
-      <section class="library">
+      <section className="library">
         <div className="filter">
-            <div class="filter-input">
+            <div className="filter-input">
                 <ion-icon name="search-outline"></ion-icon>
                 <input  type="text" placeholder="Type to filter" onChange={e=>{setSerchTerm(e.target.value)}}/>
             </div>
