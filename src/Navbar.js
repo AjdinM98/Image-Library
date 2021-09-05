@@ -2,7 +2,6 @@
 import { useState } from 'react'
 const Navbar = () => {
     const [isActive,setActive]=useState(false);
-    const container = document.querySelector('.container');
     let hamburgerClick=()=>{
         setActive(!isActive)
     }
@@ -11,7 +10,7 @@ const Navbar = () => {
             <a className="header-logo" href="#">LOGO</a>
             <ion-icon name="menu-outline" class="hamburger" onClick={hamburgerClick}></ion-icon>
             
-            <div className={isActive ? 'nav-container show':'nav-container'}>
+            <div className={isActive ? 'nav-container shownav':'nav-container'}>
                     <a className="navbar-logo" href="#">LOGO</a>
                     <div className="searchbar">
                         <ion-icon name="search-outline"></ion-icon>

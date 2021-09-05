@@ -98,9 +98,18 @@ a
     justify-content: center !important;
     padding-inline: .25rem;
   }
-  .eye-icon
+  .filter-input
   {
-    margin-left: 0 !important;
+      width:15rem !important;
+  }
+  .filter-input input
+  {
+      max-width: 90% !important ;
+      padding: .5rem .5rem .5rem 0rem !important;
+  }
+  .filter-input div
+  {
+      display: inline-block !important;
   }
 /*================================SIDEBAR==========================================*/
     .sidebar-btn-container
@@ -120,16 +129,7 @@ a
       justify-content: center !important;
       padding-right: .5rem !important;
     }
-    .grid-view
-    {
-      flex: 0 0 28% !important;
-      max-width: 28% !important;
-    }
-    .container
-    {
-        grid-template-columns: unset !important;
-        grid-template-rows: 1fr;
-    }
+/*================================NAVBAR==========================================*/
     .hamburger{
         float: right;
         display: block !important;
@@ -154,19 +154,6 @@ a
         max-width: 90% !important ;
         padding: .5rem .5rem .5rem 0rem !important;
     }
-    .filter-input
-    {
-        width:15rem !important;
-    }
-    .filter-input input
-    {
-        max-width: 90% !important ;
-        padding: .5rem .5rem .5rem 0rem !important;
-    }
-    .filter-input div
-    {
-        display: inline-block !important;
-    }
     .user-text
     {
         font-size: 1rem !important;
@@ -174,7 +161,11 @@ a
     }
     .nav-container
     {
-        display:none !important;
+        display:flex !important;
+        grid-template-columns: none !important;
+        flex-direction: column;
+        height: 0px;
+        overflow: hidden;
     }
     .icons :nth-child(2)
     {
@@ -199,6 +190,26 @@ a
         flex-direction: column-reverse;
         text-align: center;
         margin-top: 2rem !important;
+        padding-bottom: 1rem;
+    }
+    .order
+    {
+      padding-block: 1rem;
+    }
+    /*================================UTILITY==========================================*/
+    .grid-view
+    {
+      flex: 0 0 28% !important;
+      max-width: 28% !important;
+    }
+    .shownav
+    {
+      height: 100vh;
+      transition: linear height .25s;
+    }
+    .eye-icon
+    {
+      margin-left: 0 !important;
     }
 }
 /*================================NAVBAR==========================================*/
@@ -304,10 +315,11 @@ a
         grid-template-columns: repeat(3,1fr);  
     }
 /*================================UTILITY==========================================*/
+
     .show
     {  
         display: block !important;
-        height: 100vh;  
+        height: 100vh;
     }
     .hide
     {
@@ -453,6 +465,7 @@ a
     {
       display: flex;
     }
+
 /*================================SIDEBAR==========================================*/
 .sidebar
 {
